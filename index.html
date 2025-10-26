@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روائع التشطيب للأدوات الصحية - حلول متكاملة للتأسيس والتشطيب</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+
+    <!-- style hero section  -->
+      <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 29, 92, 0.85) 0%, rgba(0, 29, 92, 0.7) 100%);
+        }
+        
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .circle-bg-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 5%;
+            animation-delay: 0s;
+        }
+        
+        .circle-bg-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+        
+        .circle-bg-3 {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            left: 5%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .rotating-text {
+            height: 80px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .rotating-text span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            animation: rotateWords 12s linear infinite 0s;
+        }
+        
+        .rotating-text span:nth-child(2) { animation-delay: 4s; }
+        .rotating-text span:nth-child(3) { animation-delay: 8s; }
+        
+        @keyframes rotateWords {
+            0% { opacity: 0; transform: translateY(30px); }
+            3% { opacity: 1; transform: translateY(0px); }
+            25% { opacity: 1; transform: translateY(0px); }
+            28% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 0; }
+        }
+        
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.2);
+            animation: floatIcon 15s linear infinite;
+        }
+        
+        @keyframes floatIcon {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+        }
+        
+        .btn-outline {
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #001d5c;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+    <!-- style about section -->
+
+      <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .primary {
+            background: #377574;
+        }
+        
+        .primary-light {
+            background: rgba(0, 29, 92, 0.05);
+        }
+        
+        .accent {
+            background: #f39c12;
+        }
+        
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 29, 92, 0.03);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .circle-bg-1 {
+            width: 400px;
+            height: 400px;
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+        
+        .circle-bg-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            right: -150px;
+            animation-delay: 2s;
+        }
+        
+        .circle-bg-3 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            right: 10%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-delay-1 { animation-delay: 0.3s; }
+        .fade-in-delay-2 { animation-delay: 0.6s; }
+        .fade-in-delay-3 { animation-delay: 0.9s; }
+        
+        .feature-card {
+            transition: all 0.4s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateX(-10px);
+            border-left-color: #f39c12;
+            background: rgba(0, 29, 92, 0.02);
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #377574 0%, #377574 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 29, 92, 0.2);
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgba(0, 29, 92, 0.1) 0%, rgba(243, 156, 18, 0.1) 100%);
+            z-index: 1;
+            border-radius: 20px;
+        }
+        
+        .image-container img {
+            transition: transform 0.8s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(0, 29, 92, 0.1);
+            animation: floatElement 15s linear infinite;
+        }
+        
+        @keyframes floatElement {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+    <style>
+        /* تخصيص الألوان والخطوط */
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2d9596;
+            --primary-dark: #1a5f60;
+            --primary-light: #4fb3b5;
+        }
+        
+        /* تخصيص ألوان Tailwind */
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .bg-primary-dark {
+            background-color: var(--primary-dark);
+        }
+        
+        .text-primary {
+            color: var(--primary-color);
+        }
+        
+        .border-primary {
+            border-color: var(--primary-color);
+        }
+        
+        /* خلفية دائرية شفافة كما في اللوجو */
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(45, 149, 150, 0.1);
+            filter: blur(60px);
+        }
+        
+        .circle-bg-1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .circle-bg-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: -50px;
+        }
+        
+        /* تأثيرات الأنيميشن */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* تأثير Hover للبطاقات */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(45, 149, 150, 0.2);
+        }
+        
+        /* تصميم Hero Section */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(45, 149, 150, 0.9) 0%, rgba(26, 95, 96, 0.85) 100%);
+        }
+        
+        /* تصميم الأزرار */
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Navbar شفاف ثم صلب عند السكرول */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar.scrolled .nav-link {
+            color: #1f2937 !important;
+        }
+        
+        /* معرض الصور */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(45, 149, 150, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* تخصيص النموذج */
+        .form-input {
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(45, 149, 150, 0.1);
+        }
+        
+        /* تصميم responsive للموبايل */
+        @media (max-width: 768px) {
+            .circle-bg-1 {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .circle-bg-2 {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        /* Loading للصور */
+        img[loading="lazy"] {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- ==================== النافبار / الهيدر ==================== -->
+    <nav class="navbar fixed w-full top-0 z-50 py-4" id="navbar">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between">
+                
+                <!-- الشعار -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12   flex items-center justify-center">
+                        <img src="./asstes/img/logo روائع التشطيب.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white nav-link">روائع التشطيب</h1>
+                        <p class="text-xs text-gray-200 nav-link">للأدوات الصحية</p>
+                    </div>
+                </div>
+                
+                <!-- القائمة - Desktop -->
+                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link text-white hover:text-gray-200 font-medium transition">الرئيسية</a>
+                    <a href="#about" class="nav-link text-white hover:text-gray-200 font-medium transition">عنّا</a>
+                    <a href="#products" class="nav-link text-white hover:text-gray-200 font-medium transition">منتجاتنا</a>
+                    <a href="#services" class="nav-link text-white hover:text-gray-200 font-medium transition">خدماتنا</a>
+                    <a href="#portfolio" class="nav-link text-white hover:text-gray-200 font-medium transition">أعمالنا</a>
+                </div>
+                
+                <!-- زر CTA -->
+                <div class="hidden lg:block">
+                    <a href="#contact" class="bg-white text-primary px-6 py-2.5 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                        اطلب استشارة مجانية
+                    </a>
+                </div>
+                
+                <!-- زر القائمة - Mobile -->
+                <button class="lg:hidden text-gray-800 text-2xl" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- القائمة المنسدلة - Mobile -->
+            <div class="hidden lg:hidden mt-4 bg-white rounded-lg shadow-lg p-4" id="mobileMenu">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-primary font-medium transition">الرئيسية</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary font-medium transition">عنّا</a>
+                <a href="#products" class="block py-2 text-gray-700 hover:text-primary font-medium transition">منتجاتنا</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-primary font-medium transition">خدماتنا</a>
+                <a href="#portfolio" class="block py-2 text-gray-700 hover:text-primary font-medium transition">أعمالنا</a>
+                <a href="#contact" class="block mt-3 bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-center hover:bg-primary-dark transition">
+                    اطلب استشارة مجانية
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== Hero Section  ==================== -->
+     <!-- السكشن الرئيسي -->
+    <section id="home" class="relative  min-h-[850px] flex items-center justify-center overflow-hidden pt-20">
+        <!-- الخلفية -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1920&h=1080&fit=crop" 
+                 alt="حمام راقي" 
+                 class="w-full h-full object-cover"
+                 loading="lazy">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <!-- الدوائر الشفافة -->
+        <div class="circle-bg circle-bg-1"></div>
+        <div class="circle-bg circle-bg-2"></div>
+        <div class="circle-bg circle-bg-3"></div>
+        
+        <!-- الأيقونات المتحركة -->
+        <div class="floating-icons">
+            <!-- سيتم إضافة الأيقونات عبر JavaScript -->
+        </div>
+        
+        <!-- المحتوى -->
+        <div class="container mx-auto px-4 lg:px-8 z-10 text-center text-white pt-[50px] py-5">
+            <div class="max-w-6xl mx-auto fade-in" id="heroContent">
+                <!-- اسم الشركة -->
+                <div class="mb-8">
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 flex items-center justify-center text-blue-800 font-bold text-lg ml-3">
+                         <img src="./asstes/img/logo روائع التشطيب.png" alt="">
+                        </div>
+                        <h2 class="text-2xl font-bold"> روائع التشطيب</h2>
+                    </div>
+                </div>
+                
+                <!-- العنوان الرئيسي -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    الحلول المتكاملة 
+                    <div class="rotating-text mt-4">
+                        <span class="text-orange-400">للأدوات الصحية</span>
+                        <span class="text-orange-400">لأنظمة السباكة</span>
+                        <span class="text-orange-400">لتشطيب الحمامات</span>
+                    </div>
+                </h1>
+                
+                <!-- الوصف -->
+                <p class="text-xl lg:text-2xl mb-10 text-gray-100 font-light max-w-3xl mx-auto">
+                    نقدم حلولاً مبتكرة وخدمات متكاملة في مجال الأدوات الصحية والسباكة بجودة عالمية وتصميمات عصرية
+                </p>
+                
+                <!-- المميزات -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                    <div class="feature-card rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center text-orange-400 text-2xl">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">تركيب متقن</h3>
+                        <p class="text-gray-200">فريق فني محترف لتركيب الأدوات الصحية بدقة عالية</p>
+                    </div>
+                    
+                    <div class="feature-card rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center text-orange-400 text-2xl">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">ضمان الجودة</h3>
+                        <p class="text-gray-200">نضمن لك منتجات وخدمات بجودة عالية تدوم طويلاً</p>
+                    </div>
+                    
+                    <div class="feature-card rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center text-orange-400 text-2xl">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">دعم فني</h3>
+                        <p class="text-gray-200">خدمة عملاء على مدار الساعة لحل أي مشكلة تواجهك</p>
+                    </div>
+                </div>
+                
+                <!-- الأزرار -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:0542344956" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-xl w-full sm:w-auto flex items-center justify-center">
+                        <i class="fas fa-phone ml-2"></i>
+                        اتصل بنا الآن
+                    </a>
+                    <a href="#services" class="btn-outline text-white px-8 py-4 rounded-full font-semibold text-lg w-full sm:w-auto flex items-center justify-center">
+                        <i class="fas fa-arrow-down ml-2"></i>
+                        تعرّف على خدماتنا
+                    </a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+ 
+
+    <script>
+        // إضافة أيقونات عائمة في الخلفية
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingIcons = document.querySelector('.floating-icons');
+            const icons = [
+                'fa-bath', 'fa-shower', 'fa-toilet', 'fa-faucet', 
+                'fa-tint', 'fa-wrench', 'fa-tools', 'fa-cog'
+            ];
+            
+            for (let i = 0; i < 15; i++) {
+                const icon = document.createElement('i');
+                icon.className = `floating-icon fas ${icons[Math.floor(Math.random() * icons.length)]}`;
+                icon.style.left = `${Math.random() * 100}%`;
+                icon.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                icon.style.animationDelay = `${Math.random() * 5}s`;
+                icon.style.fontSize = `${Math.random() * 20 + 30}px`;
+                floatingIcons.appendChild(icon);
+            }
+        });
+    </script>
+</body>
+
+    <!-- ==================== قسم عنّا ==================== -->
+      <section id="about" class="py-[50px] bg-white relative overflow-hidden">
+        <!-- الدوائر الخلفية -->
+        <div class="circle-bg circle-bg-1"></div>
+        <div class="circle-bg circle-bg-2"></div>
+        <div class="circle-bg circle-bg-3"></div>
+        
+        <!-- العناصر العائمة -->
+        <div class="floating-elements">
+            <!-- سيتم إضافة العناصر عبر JavaScript -->
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <!-- العنوان الرئيسي -->
+            <div class="text-center mb-16 fade-in">
+                               <div class="mb-8">
+                    <div class="inline-flex items-center bg-[#377574] text-white backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 flex items-center justify-center text-blue-800 font-bold text-lg ml-3">
+                         <img src="./asstes/img/logo روائع التشطيب.png" alt="">
+                        </div>
+                        <h2 class="text-2xl font-bold"> روائع التشطيب</h2>
+                    </div>
+                </div>
+                
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">من نحن</h2>
+                <div class="w-24 h-1 accent mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <span class="text-primary font-semibold">دريم الغد</span> شركة رائدة في مجال الأدوات الصحية والسباكة، نقدم حلولاً متكاملة تجمع بين الجودة العالمية والتصميم العصري لتلبية تطلعات عملائنا
+                </p>
+            </div>
+            
+            <!-- المحتوى الرئيسي -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                  <!-- المميزات -->
+                <div class="space-y-8">
+                    <!-- المميزات الرئيسية -->
+                    <div class="space-y-6">
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-lg fade-in fade-in-delay-2">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <div class="flex-shrink-0 w-14 h-14 primary rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">خبرة متخصصة</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        أكثر من 15 عاماً من الخبرة المتخصصة في مجال الأدوات الصحية والسباكة، مع فريق فني مدرب على أحدث التقنيات والمعايير العالمية
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-lg fade-in fade-in-delay-2">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <div class="flex-shrink-0 w-14 h-14 primary rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">فريق محترف</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        فريق عمل متكامل من المهندسين والفنيين المؤهلين، يمتلكون المهارات التقنية العالية والالتزام بمعايير الجودة والسلامة
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-lg fade-in fade-in-delay-3">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <div class="flex-shrink-0 w-14 h-14 primary rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">جودة مضمونة</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نستخدم أفضل المواد والمنتجات ذات الجودة العالية من علامات تجارية عالمية، مع ضمان شامل على جميع أعمالنا وخدماتنا
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-lg fade-in fade-in-delay-3">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <div class="flex-shrink-0 w-14 h-14 primary rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">ثقة العملاء</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        آلاف العملاء الراضين عن خدماتنا ومنتجاتنا، مع سجل حافل بالمشاريع الناجحة في القطاعين السكني والتجاري
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الإحصائيات -->
+                    <div class="grid grid-cols-3 gap-4 mt-8">
+                        <div class="stats-card text-white text-center p-4 rounded-2xl shadow-lg">
+                            <div class="text-2xl font-bold mb-1">+5000</div>
+                            <div class="text-sm opacity-90">عميل راضي</div>
+                        </div>
+                        <div class="stats-card text-white text-center p-4 rounded-2xl shadow-lg">
+                            <div class="text-2xl font-bold mb-1">+15</div>
+                            <div class="text-sm opacity-90">سنة خبرة</div>
+                        </div>
+                        <div class="stats-card text-white text-center p-4 rounded-2xl shadow-lg">
+                            <div class="text-2xl font-bold mb-1">+250</div>
+                            <div class="text-sm opacity-90">مشروع مكتمل</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- الصورة -->
+                <div class="fade-in fade-in-delay-1">
+                    <div class="image-container shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop" 
+                             alt="فريق دريم الغد" 
+                             class="w-full h-auto"
+                             loading="lazy">
+                        <div class="absolute bottom-6 right-6 z-10 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                            <div class="flex items-center space-x-3 space-x-reverse">
+                                <div class="w-12 h-12 primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-primary">+15 سنة</p>
+                                    <p class="text-sm text-gray-600">خبرة في المجال</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              
+            </div>
+            
+            <!-- شهادة الجودة -->
+            <div class="mt-16 bg-gradient-to-l from-primary to-blue-900 rounded-2xl p-8 text-white text-center fade-in">
+                <div class="max-w-2xl mx-auto">
+                    <i class="fas fa-quote-right text-4xl mb-6 text-orange-400"></i>
+                    <p class="text-xl mb-6 leading-relaxed">
+                        "نلتزم في دريم الغد بتقديم أفضل الحلول في مجال الأدوات الصحية والسباكة، مع التركيز على الجودة والدقة والابتكار في كل مشروع ننفذه"
+                    </p>
+                    <div class="flex items-center justify-center space-x-3 space-x-reverse">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-bold">المهندس أحمد محمد</p>
+                            <p class="text-sm opacity-80">المدير التنفيذي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+  
+            
+            for (let i = 0; i < 12; i++) {
+                const element = document.createElement('i');
+                element.className = `floating-element fas ${elements[Math.floor(Math.random() * elements.length)]}`;
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.animationDuration = `${Math.random() * 20 + 15}s`;
+                element.style.animationDelay = `${Math.random() * 5}s`;
+                element.style.fontSize = `${Math.random() * 20 + 20}px`;
+                floatingElements.appendChild(element);
+            }
+            
+            // تأثيرات الظهور المتتالي
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- ==================== قسم المنتجات ==================== -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">منتجاتنا</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نوفر مجموعة واسعة من الأدوات الصحية والتشطيبات عالية الجودة
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- المنتج 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scale-in">
+                    <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
+                        <i class="fas fa-faucet text-primary text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">تمديدات المياه</h3>
+                        <p class="text-gray-600 mb-4">أنابيب ووصلات بجودة عالية لضمان تدفق مثالي وطويل الأمد</p>
+                        <a href="#contact" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition">
+                            التفاصيل
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- المنتج 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scale-in" style="transition-delay: 0.1s;">
+                    <div class="h-64 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                        <i class="fas fa-toilet text-primary text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">الصرف الصحي</h3>
+                        <p class="text-gray-600 mb-4">أنظمة صرف متطورة وفعالة تضمن أداءً ممتازاً دون مشاكل</p>
+                        <a href="#contact" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition">
+                            التفاصيل
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- المنتج 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scale-in" style="transition-delay: 0.2s;">
+                    <div class="h-64 bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
+                        <i class="fas fa-shower text-primary text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">خلاطات وتشطيبات</h3>
+                        <p class="text-gray-600 mb-4">خلاطات عصرية وأنيقة بتصاميم متنوعة تناسب جميع الأذواق</p>
+                        <a href="#contact" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition">
+                            التفاصيل
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- المنتج 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scale-in" style="transition-delay: 0.3s;">
+                    <div class="h-64 bg-gradient-to-br from-pink-100 to-pink-50 flex items-center justify-center">
+                        <i class="fas fa-sink text-primary text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">إكسسوارات الحمام</h3>
+                        <p class="text-gray-600 mb-4">مجموعة متكاملة من الإكسسوارات العملية والجمالية</p>
+                        <a href="#contact" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition">
+                            التفاصيل
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== قسم الخدمات ==================== -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">خدماتنا</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نقدم خدمات شاملة في التأسيس والتشطيب بأعلى معايير الجودة
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- الخدمة 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg card-hover fade-in">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">تجهيز شبكات المياه</h3>
+                    <p class="text-gray-600 mb-4">
+                        تأسيس كامل لشبكات المياه الساخنة والباردة بأحدث التقنيات والمواد
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            تصميم وتخطيط الشبكة
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            تركيب وتوصيل الأنابيب
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            اختبار الضغط والجودة
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- الخدمة 2 -->
+                <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-lg card-hover fade-in" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bath text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">تركيب الحمامات</h3>
+                    <p class="text-gray-600 mb-4">
+                        تركيب احترافي لكامل أدوات الحمام من مراحيض وأحواض وخلاطات
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            تركيب الأدوات الصحية
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            تركيب السيراميك والبلاط
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            التشطيبات النهائية
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- الخدمة 3 -->
+                <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg card-hover fade-in" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">دعم فني ومتابعة</h3>
+                    <p class="text-gray-600 mb-4">
+                        دعم مستمر للمقاولين والعملاء مع صيانة دورية وضمان شامل
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            استشارات فنية مجانية
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            صيانة دورية
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary ml-2"></i>
+                            ضمان على الأعمال
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== قسم الأعمال السابقة ==================== -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">أعمالنا</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نفخر بإنجازاتنا ونعرض لكم نماذج من أعمالنا المتميزة
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- صورة 1 -->
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&h=400&fit=crop" 
+                         alt="حمام فاخر" 
+                         class="w-full h-72 object-cover"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">حمام فاخر</h3>
+                            <p>تشطيب متكامل</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- صورة 2 -->
+                <div class="gallery-item scale-in" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop" 
+                         alt="مطبخ عصري" 
+                         class="w-full h-72 object-cover"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">مطبخ عصري</h3>
+                            <p>تمديدات متطورة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- صورة 3 -->
+                <div class="gallery-item scale-in" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop" 
+                         alt="ديكور راقي" 
+                         class="w-full h-72 object-cover"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">ديكور راقي</h3>
+                            <p>خلاطات وإكسسوارات</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- صورة 4 -->
+                <div class="gallery-item scale-in" style="transition-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=600&h=400&fit=crop" 
+                         alt="حمام حديث" 
+                         class="w-full h-72 object-cover"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">حمام حديث</h3>
+                            <p>تصميم عصري</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- صورة 5 -->
+                <div class="gallery-item scale-in" style="transition-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop" 
+                         alt="حمام بورسلين" 
+                         class="w-full h-72 object-cover"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">بورسلين فاخر</h3>
+                            <p>تشطيبات راقية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- صورة 6 -->
+                <div class="gallery-item scale-in" style="transition-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop" 
+                         alt="مشروع متكامل" 
+                         class="w-full h-72 object-cover"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">مشروع متكامل</h3>
+                            <p>جودة وإتقان</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== قسم لماذا نحن ==================== -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">لماذا نحن؟</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نتميز بمجموعة من المزايا التي تجعلنا الخيار الأول لعملائنا
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- الميزة 1 -->
+                <div class="text-center fade-in">
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-gem text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">جودة عالية</h3>
+                    <p class="text-gray-600">نستخدم أفضل المنتجات والمواد ذات الجودة العالمية</p>
+                </div>
+                
+                <!-- الميزة 2 -->
+                <div class="text-center fade-in" style="transition-delay: 0.1s;">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-shield-alt text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">ضمان شامل</h3>
+                    <p class="text-gray-600">نوفر ضماناً شاملاً على جميع أعمالنا ومنتجاتنا</p>
+                </div>
+                
+                <!-- الميزة 3 -->
+                <div class="text-center fade-in" style="transition-delay: 0.2s;">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-clock text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">التزام بالوقت</h3>
+                    <p class="text-gray-600">نحترم الوقت ونلتزم بالمواعيد المحددة للتسليم</p>
+                </div>
+                
+                <!-- الميزة 4 -->
+                <div class="text-center fade-in" style="transition-delay: 0.3s;">
+                    <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-tag text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">أسعار تنافسية</h3>
+                    <p class="text-gray-600">نقدم أفضل الأسعار مع الحفاظ على الجودة العالية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== قسم التواصل ==================== -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">تواصل معنا</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نحن هنا للإجابة على استفساراتكم وتقديم استشارة مجانية
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- معلومات التواصل -->
+                <div class="space-y-8 fade-in">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0 w-14 h-14 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">واتساب</h3>
+                                <a href="https://wa.me/966500000000" class="text-primary text-lg hover:underline" dir="ltr">
+                                    +966 50 000 0000
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0 w-14 h-14 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">الهاتف</h3>
+                                <a href="tel:+966500000000" class="text-primary text-lg hover:underline" dir="ltr">
+                                    +966 50 000 0000
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0 w-14 h-14 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">البريد الإلكتروني</h3>
+                                <a href="mailto:info@rawae-finishing.com" class="text-primary text-lg hover:underline">
+                                    info@rawae-finishing.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0 w-14 h-14 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">العنوان</h3>
+                                <p class="text-gray-600 text-lg">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الخريطة -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.68288866084!2d46.40322879999999!3d24.713552199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- نموذج التواصل -->
+                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">أرسل لنا رسالة</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">الاسم</label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 rounded-lg form-input" 
+                                   placeholder="أدخل اسمك الكامل"
+                                   required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">رقم الجوال</label>
+                            <input type="tel" 
+                                   class="w-full px-4 py-3 rounded-lg form-input" 
+                                   placeholder="05XXXXXXXX"
+                                   required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني</label>
+                            <input type="email" 
+                                   class="w-full px-4 py-3 rounded-lg form-input" 
+                                   placeholder="example@email.com"
+                                   required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">نوع الخدمة</label>
+                            <select class="w-full px-4 py-3 rounded-lg form-input" required>
+                                <option value="">اختر نوع الخدمة</option>
+                                <option value="water">تمديدات المياه</option>
+                                <option value="sanitation">الصرف الصحي</option>
+                                <option value="mixers">خلاطات وتشطيبات</option>
+                                <option value="accessories">إكسسوارات</option>
+                                <option value="installation">تركيب حمامات</option>
+                                <option value="consultation">استشارة</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">الرسالة</label>
+                            <textarea class="w-full px-4 py-3 rounded-lg form-input h-32" 
+                                      placeholder="اكتب رسالتك هنا..."
+                                      required></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-dark transition shadow-lg">
+                            <i class="fas fa-paper-plane ml-2"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== الفوتر ==================== -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- معلومات الشركة -->
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-bath text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">روائع التشطيب</h3>
+                            <p class="text-sm text-gray-400">للأدوات الصحية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        شركة رائدة في مجال الأدوات الصحية والتشطيبات، نقدم حلولاً متكاملة بجودة عالية
+                    </p>
+                </div>
+                
+                <!-- روابط سريعة -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition">الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition">عنّا</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-primary transition">منتجاتنا</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">خدماتنا</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-primary transition">أعمالنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- الخدمات -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">تجهيز شبكات المياه</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">تركيب الحمامات</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">الصرف الصحي</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">الخلاطات والتشطيبات</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">الدعم الفني</a></li>
+                    </ul>
+                </div>
+                
+                <!-- وسائل التواصل -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">تابعنا</h4>
+                    <div class="flex space-x-4 space-x-reverse mb-6">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        <i class="fas fa-phone ml-2"></i>
+                        <span dir="ltr">+966 50 000 0000</span>
+                    </p>
+                    <p class="text-gray-400 text-sm mt-2">
+                        <i class="fas fa-envelope ml-2"></i>
+                        info@rawae-finishing.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    جميع الحقوق محفوظة © 2024 روائع التشطيب للأدوات الصحية
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="scrollToTop" 
+            class="fixed bottom-8 left-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg hover:bg-primary-dark transition opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== JavaScript ==================== -->
+    <script>
+        // تفعيل الأنيميشن عند السكرول
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // مراقبة جميع العناصر التي تحتوي على fade-in أو scale-in
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // تأثير الأنيميشن للـ Hero عند التحميل
+        window.addEventListener('load', () => {
+            document.getElementById('heroContent').classList.add('visible');
+        });
+        
+        // تغيير شكل النافبار عند السكرول
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // القائمة المنسدلة للموبايل
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // زر العودة للأعلى
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // معالجة نموذج التواصل
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // هنا يمكن إضافة كود الإرسال إلى API
+            // لكن حالياً سنعرض رسالة نجاح فقط
+            
+            alert('شكراً لتواصلكم معنا! سنقوم بالرد عليكم في أقرب وقت ممكن.');
+            contactForm.reset();
+        });
+        
+        // Smooth scroll للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
