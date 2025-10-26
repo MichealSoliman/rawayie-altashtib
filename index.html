@@ -519,6 +519,115 @@
             100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
     </style>
+    <!-- style why-us section  -->
+
+        <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .primary {
+            background: #377574;
+        }
+        
+        .primary-light {
+            background: rgba(55, 117, 116, 0.08);
+        }
+        
+        .text-primary {
+            color: #377574;
+        }
+        
+        .border-primary {
+            border-color: #377574;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .feature-item {
+            transition: all 0.3s ease;
+            padding: 20px;
+            border-right: 3px solid transparent;
+        }
+        
+        .feature-item:hover {
+            border-right-color: #377574;
+            background: rgba(55, 117, 116, 0.03);
+            transform: translateX(-5px);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1);
+            color: #377574;
+        }
+        
+        .image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgba(55, 117, 116, 0.1) 0%, rgba(55, 117, 116, 0.05) 100%);
+            z-index: 1;
+        }
+        
+        .image-container img {
+            transition: transform 0.8s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(55, 117, 116, 0.1);
+            animation: floatElement 20s linear infinite;
+        }
+        
+        @keyframes floatElement {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+    </style>
     <style>
         /* تخصيص الألوان والخطوط */
         * {
@@ -1861,55 +1970,199 @@
     </section>
 
     <!-- ==================== قسم لماذا نحن ==================== -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 lg:px-8">
+      <section class="py-20 bg-white relative overflow-hidden">
+        <!-- العناصر العائمة -->
+        <div class="floating-elements">
+            <!-- سيتم إضافة العناصر عبر JavaScript -->
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <!-- العنوان الرئيسي -->
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">لماذا نحن؟</h2>
-                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    نتميز بمجموعة من المزايا التي تجعلنا الخيار الأول لعملائنا
+   <div class="mb-8">
+                    <div class="inline-flex items-center bg-[#377574] text-white backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 flex items-center justify-center text-blue-800 font-bold text-lg ml-3">
+                         <img src="./asstes/img/logo روائع التشطيب.png" alt="">
+                        </div>
+                        <h2 class="text-2xl font-bold"> روائع التشطيب</h2>
+                    </div>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">لماذا تختارنا؟</h2>
+                <div class="w-24 h-1 primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    نتميز بمجموعة فريدة من المزايا التي تجعلنا الخيار الأمثل لمشاريع التأسيس والتشطيب
                 </p>
             </div>
             
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- الميزة 1 -->
-                <div class="text-center fade-in">
-                    <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-gem text-white text-4xl"></i>
+            <!-- المحتوى الرئيسي مع الصورة -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- المحتوى النصي -->
+                <div class="space-y-8">
+                    <!-- الميزة 1 -->
+                    <div class="feature-item fade-in">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 primary-light rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-gem text-primary text-xl feature-icon"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">جودة استثنائية لا مثيل لها</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    في روائع التشطيب، نؤمن بأن الجودة هي أساس النجاح. نستخدم فقط أفضل المواد والمنتجات ذات الجودة العالمية التي تخضع لاختبارات صارمة لضمان المتانة والأداء المتميز. كل مشروع ننفذه يحمل توقيعنا المميز بالدقة والاحترافية.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">جودة عالية</h3>
-                    <p class="text-gray-600">نستخدم أفضل المنتجات والمواد ذات الجودة العالمية</p>
+                    
+                    <!-- الميزة 2 -->
+                    <div class="feature-item fade-in" style="animation-delay: 0.1s;">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 primary-light rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-primary text-xl feature-icon"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">ضمان شامل يغطي كل شيء</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    نقدم لكم ضماناً شاملاً يمتد لـ 5 سنوات على جميع أعمالنا ومنتجاتنا. ليس هذا فحسب، بل نوفّر خدمة متابعة مستمرة وصيانة دورية لضمان استمرارية الأداء المثالي. فريق الدعم الفني لدينا جاهز للرد على استفساراتكم في أي وقت.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الميزة 3 -->
+                    <div class="feature-item fade-in" style="animation-delay: 0.2s;">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 primary-light rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-bolt text-primary text-xl feature-icon"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">سرعة ودقة في التنفيذ</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    الوقت هو المال، ونحن نقدّر وقت عملائنا. لذلك نلتزم بمواعيد التسليم بدقة متناهية، مع الحفاظ على أعلى معايير الجودة. فريق العمل المدرب لدينا يعمل بتناغم لضمان إنجاز المشاريع في الوقت المحدد دون أي تأخير.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الميزة 4 -->
+                    <div class="feature-item fade-in" style="animation-delay: 0.3s;">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 primary-light rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-tag text-primary text-xl feature-icon"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">أسعار تنافسية مع قيمة مضافة</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    نحن نؤمن بتقديم أفضل قيمة مقابل المال. أسعارنا تنافسية مع الحفاظ على الجودة العالية، ونقدم عروضاً خاصة تناسب جميع الميزانيات. استثمارك معنا ليس فقط شراء منتج، بل شراء خبرة وضمان وخدمة متكاملة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الإحصائيات -->
+                    <div class="grid grid-cols-3 gap-4 mt-8 fade-in" style="animation-delay: 0.4s;">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-1">+1500</div>
+                            <div class="text-sm text-gray-600">مشروع مكتمل</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-1">98%</div>
+                            <div class="text-sm text-gray-600">عملاء راضون</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-1">15+</div>
+                            <div class="text-sm text-gray-600">سنة خبرة</div>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- الميزة 2 -->
-                <div class="text-center fade-in" style="transition-delay: 0.1s;">
-                    <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-shield-alt text-white text-4xl"></i>
+                <!-- الصورة المعبرة -->
+                <div class="fade-in" style="animation-delay: 0.5s;">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1581578731540-c1afb1b698b9?w=600&h=800&fit=crop" 
+                             alt="فريق العمل في روائع التشطيب" 
+                             class="w-full h-auto"
+                             loading="lazy">
+                        <div class="absolute bottom-6 right-6 z-10 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg max-w-xs">
+                            <div class="flex items-center space-x-3 space-x-reverse">
+                                <div class="w-12 h-12 primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-primary">شركة معتمدة</p>
+                                    <p class="text-sm text-gray-600">شهادة الجودة العالمية</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">ضمان شامل</h3>
-                    <p class="text-gray-600">نوفر ضماناً شاملاً على جميع أعمالنا ومنتجاتنا</p>
                 </div>
-                
-                <!-- الميزة 3 -->
-                <div class="text-center fade-in" style="transition-delay: 0.2s;">
-                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-clock text-white text-4xl"></i>
+            </div>
+            
+            <!-- دعوة للعمل -->
+            <div class="text-center mt-16 fade-in" style="animation-delay: 0.6s;">
+                <div class="bg-gradient-to-r from-primary to-teal-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">جاهزون لبدء مشروعك؟</h3>
+                    <p class="text-lg mb-6 opacity-90">اتصل بنا الآن واحصل على استشارة مجانية وتقدير سعر دقيق</p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 space-x-reverse">
+                        <a href="tel:0542344956" class="bg-white text-primary px-8 py-3 rounded-lg font-bold flex items-center justify-center transition hover:bg-gray-100">
+                            <i class="fas fa-phone ml-2"></i>
+                            اتصل بنا الآن
+                        </a>
+                        <a href="https://wa.me/966542344956" class="bg-green-500 text-white px-8 py-3 rounded-lg font-bold flex items-center justify-center transition hover:bg-green-600">
+                            <i class="fab fa-whatsapp ml-2"></i>
+                            محادثة واتساب
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">التزام بالوقت</h3>
-                    <p class="text-gray-600">نحترم الوقت ونلتزم بالمواعيد المحددة للتسليم</p>
-                </div>
-                
-                <!-- الميزة 4 -->
-                <div class="text-center fade-in" style="transition-delay: 0.3s;">
-                    <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-tag text-white text-4xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">أسعار تنافسية</h3>
-                    <p class="text-gray-600">نقدم أفضل الأسعار مع الحفاظ على الجودة العالية</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // إضافة عناصر عائمة في الخلفية
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingElements = document.querySelector('.floating-elements');
+            const elements = [
+                'fa-gem', 'fa-shield-alt', 'fa-bolt', 'fa-tag', 
+                'fa-star', 'fa-check', 'fa-award', 'fa-medal'
+            ];
+            
+            for (let i = 0; i < 10; i++) {
+                const element = document.createElement('i');
+                element.className = `floating-element fas ${elements[Math.floor(Math.random() * elements.length)]}`;
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.animationDuration = `${Math.random() * 20 + 15}s`;
+                element.style.animationDelay = `${Math.random() * 5}s`;
+                element.style.fontSize = `${Math.random() * 20 + 20}px`;
+                floatingElements.appendChild(element);
+            }
+            
+            // تأثيرات الظهور عند التمرير
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>n>
 
     <!-- ==================== قسم التواصل ==================== -->
     <section id="contact" class="py-20 bg-gray-50">
@@ -2052,84 +2305,242 @@
     </section>
 
     <!-- ==================== الفوتر ==================== -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <!-- معلومات الشركة -->
-                <div>
-                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                            <i class="fas fa-bath text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">روائع التشطيب</h3>
-                            <p class="text-sm text-gray-400">للأدوات الصحية</p>
-                        </div>
+<footer class="bg-gradient-to-b from-gray-900 to-gray-800 text-white relative overflow-hidden">
+    <!-- خلفية متحركة -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-10 left-10 w-32 h-32 bg-primary rounded-full animate-pulse"></div>
+        <div class="absolute bottom-20 right-20 w-24 h-24 bg-primary rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-primary rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 lg:px-8 relative z-10">
+        <!-- القسم العلوي -->
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 py-12">
+            <!-- معلومات الشركة -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-bath text-white text-2xl"></i>
                     </div>
-                    <p class="text-gray-400 text-sm">
-                        شركة رائدة في مجال الأدوات الصحية والتشطيبات، نقدم حلولاً متكاملة بجودة عالية
-                    </p>
-                </div>
-                
-                <!-- روابط سريعة -->
-                <div>
-                    <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-primary transition">الرئيسية</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-primary transition">عنّا</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-primary transition">منتجاتنا</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">خدماتنا</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-primary transition">أعمالنا</a></li>
-                    </ul>
-                </div>
-                
-                <!-- الخدمات -->
-                <div>
-                    <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">تجهيز شبكات المياه</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">تركيب الحمامات</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">الصرف الصحي</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">الخلاطات والتشطيبات</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">الدعم الفني</a></li>
-                    </ul>
-                </div>
-                
-                <!-- وسائل التواصل -->
-                <div>
-                    <h4 class="text-lg font-bold mb-4">تابعنا</h4>
-                    <div class="flex space-x-4 space-x-reverse mb-6">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                    <div>
+                        <h3 class="text-2xl font-bold">روائع التشطيب</h3>
+                        <p class="text-teal-300 text-sm font-medium">للأدوات الصحية والسباكة</p>
                     </div>
-                    <p class="text-gray-400 text-sm">
-                        <i class="fas fa-phone ml-2"></i>
-                        <span dir="ltr">+966 50 000 0000</span>
-                    </p>
-                    <p class="text-gray-400 text-sm mt-2">
-                        <i class="fas fa-envelope ml-2"></i>
-                        info@rawae-finishing.com
-                    </p>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                    شركة رائدة في مجال الأدوات الصحية والتشطيبات، نقدم حلولاً متكاملة بجودة عالمية وخدمة مميزة. نحن نبتكر لنمنحك تجربة فريدة في عالم التشطيب.
+                </p>
+                <div class="flex space-x-3 space-x-reverse">
+                    <div class="bg-gray-800 rounded-lg px-3 py-1 text-sm">
+                        <i class="fas fa-certificate text-yellow-400 ml-1"></i>
+                        معتمد
+                    </div>
+                    <div class="bg-gray-800 rounded-lg px-3 py-1 text-sm">
+                        <i class="fas fa-award text-yellow-400 ml-1"></i>
+                        جودة
+                    </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    جميع الحقوق محفوظة © 2024 روائع التشطيب للأدوات الصحية
-                </p>
+            <!-- روابط سريعة -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 pb-2 border-b-2 border-primary inline-block">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#home" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-left text-primary ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-left text-primary ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            عن الشركة
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-left text-primary ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            منتجاتنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-left text-primary ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            خدماتنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-left text-primary ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- الخدمات -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 pb-2 border-b-2 border-primary inline-block">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 flex items-center group">
+                            <div class="w-2 h-2 bg-primary rounded-full ml-3 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            تجهيز شبكات المياه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 flex items-center group">
+                            <div class="w-2 h-2 bg-primary rounded-full ml-3 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            تركيب الحمامات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 flex items-center group">
+                            <div class="w-2 h-2 bg-primary rounded-full ml-3 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            أنظمة الصرف الصحي
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 flex items-center group">
+                            <div class="w-2 h-2 bg-primary rounded-full ml-3 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            تشطيب المطابخ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 flex items-center group">
+                            <div class="w-2 h-2 bg-primary rounded-full ml-3 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            الصيانة والدعم
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- وسائل التواصل -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 pb-2 border-b-2 border-primary inline-block">تواصل معنا</h4>
+                
+                <!-- معلومات الاتصال -->
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center space-x-3 space-x-reverse group cursor-pointer">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-300 text-sm">اتصل بنا</p>
+                            <a href="tel:+966542344956" class="text-white font-semibold hover:text-primary transition">+966 54 234 4956</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 space-x-reverse group cursor-pointer">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-300 text-sm">البريد الإلكتروني</p>
+                            <a href="mailto:info@rawae.com" class="text-white font-semibold hover:text-primary transition">info@rawae.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-300 text-sm">الموقع</p>
+                            <p class="text-white font-semibold">المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- وسائل التواصل الاجتماعي -->
+                <div>
+                    <p class="text-gray-300 mb-3">تابعنا على</p>
+                    <div class="flex space-x-3 space-x-reverse">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-whatsapp text-white group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-facebook-f text-white group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-pink-600 hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-instagram text-white group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-400 hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-twitter text-white group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+        
+        <!-- قسم النشرة البريدية -->
+        <div class="border-t border-gray-700 py-8">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h4 class="text-xl font-bold mb-2">اشترك في نشرتنا البريدية</h4>
+                    <p class="text-gray-300">احصل على آخر العروض والأخبار مباشرة في بريدك الإلكتروني</p>
+                </div>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 space-x-reverse">
+                    <input 
+                        type="email" 
+                        placeholder="بريدك الإلكتروني" 
+                        class="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition"
+                    >
+                    <button class="bg-primary hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        اشتراك
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- القسم السفلي -->
+        <div class="border-t border-gray-700 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">
+                        جميع الحقوق محفوظة © 2024 
+                        <span class="text-primary font-semibold">روائع التشطيب</span> 
+                        للأدوات الصحية
+                    </p>
+                </div>
+                
+                <div class="flex items-center space-x-6 space-x-reverse text-gray-400">
+                    <a href="#" class="hover:text-primary transition text-sm">شروط الاستخدام</a>
+                    <a href="#" class="hover:text-primary transition text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-primary transition text-sm">الأسئلة الشائعة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- زر العودة للأعلى -->
+    <button onclick="scrollToTop()" class="fixed bottom-6 left-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</footer>
+
+<script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    // إظهار/إخفاء زر العودة للأعلى
+    window.addEventListener('scroll', function() {
+        const scrollButton = document.querySelector('button[onclick="scrollToTop()"]');
+        if (window.scrollY > 300) {
+            scrollButton.style.display = 'flex';
+        } else {
+            scrollButton.style.display = 'none';
+        }
+    });
+</script>
+
+
 
     <!-- زر العودة للأعلى -->
     <button id="scrollToTop" 
@@ -2208,17 +2619,7 @@
             });
         });
         
-        // معالجة نموذج التواصل
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // هنا يمكن إضافة كود الإرسال إلى API
-            // لكن حالياً سنعرض رسالة نجاح فقط
-            
-            alert('شكراً لتواصلكم معنا! سنقوم بالرد عليكم في أقرب وقت ممكن.');
-            contactForm.reset();
-        });
+       
         
         // Smooth scroll للروابط
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
