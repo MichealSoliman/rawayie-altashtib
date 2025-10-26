@@ -660,19 +660,12 @@
             }
         });
     </script>
-</body>
+
 
     <!-- ==================== قسم عنّا ==================== -->
       <section id="about" class="py-[50px] bg-white relative overflow-hidden">
-        <!-- الدوائر الخلفية -->
-        <div class="circle-bg circle-bg-1"></div>
-        <div class="circle-bg circle-bg-2"></div>
-        <div class="circle-bg circle-bg-3"></div>
-        
-        <!-- العناصر العائمة -->
-        <div class="floating-elements">
-            <!-- سيتم إضافة العناصر عبر JavaScript -->
-        </div>
+       
+       
         
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <!-- العنوان الرئيسي -->
@@ -798,18 +791,18 @@
             </div>
             
             <!-- شهادة الجودة -->
-            <div class="mt-16 bg-gradient-to-l from-primary to-blue-900 rounded-2xl p-8 text-white text-center fade-in">
+            <div class="mt-16 bg-gradient-to-l from-primary to-blue-900 rounded-2xl p-8 text-[#377574] text-center fade-in">
                 <div class="max-w-2xl mx-auto">
                     <i class="fas fa-quote-right text-4xl mb-6 text-orange-400"></i>
                     <p class="text-xl mb-6 leading-relaxed">
-                        "نلتزم في دريم الغد بتقديم أفضل الحلول في مجال الأدوات الصحية والسباكة، مع التركيز على الجودة والدقة والابتكار في كل مشروع ننفذه"
+                        "نلتزم في  روائع التشطيب بتقديم أفضل الحلول في مجال الأدوات الصحية والسباكة، مع التركيز على الجودة والدقة والابتكار في كل مشروع ننفذه"
                     </p>
                     <div class="flex items-center justify-center space-x-3 space-x-reverse">
                         <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                             <i class="fas fa-user-tie"></i>
                         </div>
                         <div class="text-right">
-                            <p class="font-bold">المهندس أحمد محمد</p>
+                            <p class="font-bold">المهندس</p>
                             <p class="text-sm opacity-80">المدير التنفيذي</p>
                         </div>
                     </div>
@@ -817,39 +810,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-  
-            
-            for (let i = 0; i < 12; i++) {
-                const element = document.createElement('i');
-                element.className = `floating-element fas ${elements[Math.floor(Math.random() * elements.length)]}`;
-                element.style.left = `${Math.random() * 100}%`;
-                element.style.animationDuration = `${Math.random() * 20 + 15}s`;
-                element.style.animationDelay = `${Math.random() * 5}s`;
-                element.style.fontSize = `${Math.random() * 20 + 20}px`;
-                floatingElements.appendChild(element);
-            }
-            
-            // تأثيرات الظهور المتتالي
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                    }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
 
     <!-- ==================== قسم المنتجات ==================== -->
     <section id="products" class="py-20 bg-gray-50">
