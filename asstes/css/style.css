@@ -1,0 +1,807 @@
+
+   /* style hero section */ 
+ 
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .circle-bg-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 5%;
+            animation-delay: 0s;
+        }
+        
+        .circle-bg-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+        
+        .circle-bg-3 {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            left: 5%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .rotating-text {
+            height: 80px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .rotating-text span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            animation: rotateWords 12s linear infinite 0s;
+        }
+        
+        .rotating-text span:nth-child(2) { animation-delay: 4s; }
+        .rotating-text span:nth-child(3) { animation-delay: 8s; }
+        
+        @keyframes rotateWords {
+            0% { opacity: 0; transform: translateY(30px); }
+            3% { opacity: 1; transform: translateY(0px); }
+            25% { opacity: 1; transform: translateY(0px); }
+            28% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 0; }
+        }
+        
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.2);
+            animation: floatIcon 15s linear infinite;
+        }
+        
+        @keyframes floatIcon {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+        }
+        
+        .btn-outline {
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #001d5c;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+    /* style about section*/
+
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .primary {
+            background: #1c5c50;
+        }
+        
+        .primary-light {
+            background: rgba(0, 29, 92, 0.05);
+        }
+        
+        .accent {
+            background: #f39c12;
+        }
+        
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 29, 92, 0.03);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .circle-bg-1 {
+            width: 400px;
+            height: 400px;
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+        
+        .circle-bg-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            right: -150px;
+            animation-delay: 2s;
+        }
+        
+        .circle-bg-3 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            right: 10%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-delay-1 { animation-delay: 0.3s; }
+        .fade-in-delay-2 { animation-delay: 0.6s; }
+        .fade-in-delay-3 { animation-delay: 0.9s; }
+        
+        .feature-card {
+            transition: all 0.4s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateX(-10px);
+            border-left-color: #f39c12;
+            background: rgba(0, 29, 92, 0.02);
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #1c5c50 0%, #1c5c50 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 29, 92, 0.2);
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgba(0, 29, 92, 0.1) 0%, rgba(243, 156, 18, 0.1) 100%);
+            z-index: 1;
+            border-radius: 20px;
+        }
+        
+        .image-container img {
+            transition: transform 0.8s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(0, 29, 92, 0.1);
+            animation: floatElement 15s linear infinite;
+        }
+        
+        @keyframes floatElement {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+ 
+          /* style products section */
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .primary {
+            background: #1c5c50;
+        }
+        
+        .primary-light {
+            background: rgba(55, 117, 116, 0.1);
+        }
+        
+        .primary-dark {
+            background: #2a5c5b;
+        }
+        
+        .text-primary {
+            color: #1c5c50;
+        }
+        
+        .border-primary {
+            border-color: #1c5c50;
+        }
+        
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(55, 117, 116, 0.15);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: scaleIn 0.6s ease forwards;
+        }
+        
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .product-image {
+            transition: transform 0.6s ease;
+        }
+        
+        .card-hover:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #1ec45b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-call {
+            background: #1c5c50;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-call:hover {
+            background: #2a5c5b;
+            transform: translateY(-2px);
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            background: rgba(55, 117, 116, 0.05);
+            border-radius: 50%;
+            animation: floatShape 15s linear infinite;
+        }
+        
+        @keyframes floatShape {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+   
+
+    /* style services section  */
+      
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .primary {
+            background: #1c5c50;
+        }
+        
+        .primary-light {
+            background: rgba(55, 117, 116, 0.08);
+        }
+        
+        .text-primary {
+            color: #1c5c50;
+        }
+        
+        .border-primary {
+            border-color: #1c5c50;
+        }
+        
+        .card-hover {
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(55, 117, 116, 0.15);
+            border-color: #1c5c50;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .service-icon {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(55, 117, 116, 0.1);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .card-hover:hover .service-icon::before {
+            transform: scale(1.5);
+        }
+        
+        .card-hover:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .feature-list li {
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        
+        .feature-list li:hover {
+            transform: translateX(-5px);
+            color: #1c5c50;
+        }
+        
+        .gradient-bg-1 {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .gradient-bg-3 {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(55, 117, 116, 0.1);
+            animation: floatElement 20s linear infinite;
+        }
+        
+        @keyframes floatElement {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+   
+     
+     /* style why-us section  */
+       
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .primary {
+            background: #1c5c50;
+        }
+        
+        .primary-light {
+            background: rgba(55, 117, 116, 0.08);
+        }
+        
+        .text-primary {
+            color: #1c5c50;
+        }
+        
+        .border-primary {
+            border-color: #1c5c50;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .feature-item {
+            transition: all 0.3s ease;
+            padding: 20px;
+            border-right: 3px solid transparent;
+        }
+        
+        .feature-item:hover {
+            border-right-color: #1c5c50;
+            background: rgba(55, 117, 116, 0.03);
+            transform: translateX(-5px);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1);
+            color: #1c5c50;
+        }
+        
+        .image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgba(55, 117, 116, 0.1) 0%, rgba(55, 117, 116, 0.05) 100%);
+            z-index: 1;
+        }
+        
+        .image-container img {
+            transition: transform 0.8s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(55, 117, 116, 0.1);
+            animation: floatElement 20s linear infinite;
+        }
+        
+        @keyframes floatElement {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+    
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #1c5c50;
+            --primary-dark: #1a5f60;
+            --primary-light: #4fb3b5;
+        }
+        
+        /* تخصيص ألوان Tailwind */
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .bg-primary-dark {
+            background-color: var(--primary-dark);
+        }
+        
+        .text-primary {
+            color: var(--primary-color);
+        }
+        
+        .border-primary {
+            border-color: var(--primary-color);
+        }
+        
+        /* خلفية دائرية شفافة كما في اللوجو */
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(45, 149, 150, 0.1);
+            filter: blur(60px);
+        }
+        
+        .circle-bg-1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .circle-bg-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: -50px;
+        }
+        
+        /* تأثيرات الأنيميشن */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* تأثير Hover للبطاقات */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(45, 149, 150, 0.2);
+        }
+        
+     /* تصميم Hero Section */
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(28, 92, 80, 0.95) 0%, rgba(18, 65, 56, 0.9) 100%);
+}
+
+        
+        /* تصميم الأزرار */
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Navbar شفاف ثم صلب عند السكرول */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar.scrolled .nav-link {
+            color: #1f2937 !important;
+        }
+        
+        /* معرض الصور */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+background: rgba(28, 92, 80, 0.8);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* تخصيص النموذج */
+        .form-input {
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(45, 149, 150, 0.1);
+        }
+        
+        /* تصميم responsive للموبايل */
+        @media (max-width: 768px) {
+            .circle-bg-1 {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .circle-bg-2 {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        /* Loading للصور */
+        img[loading="lazy"] {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+   
